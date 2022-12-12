@@ -1,33 +1,67 @@
-.favorites {
+.fav-container {
     box-sizing: border-box;
     border: 1px solid rgba(0, 8, 7);
     padding: 30px 20px;
-}
-
-.favorites__name {
+  }
+  
+  
+  
+  .fav_list {
+    margin-bottom: 24px;
+  }
+  
+  .fav_name {
     box-sizing: border-box;
     width: 100%;
     font-size: 16px;
     padding: 5px 10px;
-    border: 1px solid rgba(0, 8, 7, .5);
+    border: 1px solid rgba(0, 8, 7, 0.5);
     margin-bottom: 24px;
-}
+  }
 
-.favorites__list {
-    margin-bottom: 24px;
-}
-
-.favorites__save {
+  .fav_list li {
+    margin-bottom: 10px;
+  }
+  
+  .fav_save {
     border: none;
-    background-color: #496DDB;
+    background-color: #14C38E;
     padding: 10px 15px;
-    color: #FFEEDB;
+    color: #ffeedb;
     font-size: 14px;
     transition: all 0.2s linear;
-}
-
-.favorites__save:hover {
+    border-radius: px;
+  }
+  
+  .fav_save:hover {
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.2s linear;
+  }
+  .remove-fav-movie {
+    border:none;
+    margin-right: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    font-size: 17px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .remove-fav-movie:hover {
+    transform: scale(1.125);
+  }
+  
+  .movie-name {
+    line-height: 1.5rem;
+    width: 87%;
+  }
+
+  .block {
+  display: flex;
+  justify-content: space-between;
 }
+
+  
