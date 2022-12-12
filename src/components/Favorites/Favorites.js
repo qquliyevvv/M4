@@ -69,7 +69,7 @@ function Favorites(props) {
           onClick={saveListHandler}
           
         >
-          Save List
+          Сохранить список
         </button>
       ) : (
         <button type="button" className="fav_save">
@@ -78,7 +78,7 @@ function Favorites(props) {
             target="_blank"
             className="link-to__list"
           >
-            Your favorite movies
+            Ваши избранные
           </Link>
         </button>
       )}

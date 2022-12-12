@@ -32,7 +32,7 @@ function MovieItem(props) {
           }}
           disabled={ifIdInFavorites(imdbID)}
         >
-          {ifIdInFavorites(imdbID) ? `Movie added to cart` : "Add to cart"}
+          {ifIdInFavorites(imdbID) ? `Добавленно` : "Добавить в список"}
         </button>
       </div>
     </article>

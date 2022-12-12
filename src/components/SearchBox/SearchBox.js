@@ -27,7 +27,7 @@ function SearchBox(props) {
           onSubmit={searchBoxSubmitHandler}
         >
           <label className="searchFormLabel">
-          Search Movie:
+          Искать фильм по названию:
             <input
               value={searchLine}
               type="text"
@@ -40,7 +40,7 @@ function SearchBox(props) {
             className="searchFormSubmit"
             disabled={!searchLine}
           >
-            Search
+            Искать
           </button>
         </form>
       </div>
