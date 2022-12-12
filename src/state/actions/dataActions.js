@@ -11,8 +11,7 @@ export function searchMoveis(movies) {
   
   export function fetchMovies(name) {
     return function (dispatch) {
-      const api = "5599a6da";
-      
+      const api = "6d91c2ea";
       fetch(`http://www.omdbapi.com/?s=${name}&apikey=${api}`)
         .then((res) => res.json())
         .then((data) => {
@@ -107,7 +106,7 @@ export function searchMoveis(movies) {
     return function (dispatch) {
       let movieDetailsArray = [];
       movies.forEach((e) => {
-        fetch(`http://www.omdbapi.com/?i=${e}&apikey=5599a6da`)
+        fetch(`http://www.omdbapi.com/?i=${e}&apikey=6d91c2ea`)
           .then((res) => res.json())
           .then((data) => {
             movieDetailsArray = [...movieDetailsArray, { ...data }];
