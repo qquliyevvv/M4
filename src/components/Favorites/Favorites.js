@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Favorites(props) {
   const [state, setState] = useState({
     isSbm: false,
-    title: "New List",
+    title: "Новый список",
     disabled: false
   });
 
