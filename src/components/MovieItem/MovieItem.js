@@ -19,7 +19,7 @@ function MovieItem(props) {
       <img className="movieImg" src={Poster} alt={Title} />
       <div className="movie-item__info">
         <h3 className="movieTitle">
-          {Title}&nbsp;({Year})
+          {Title} ({Year})
         </h3>
         <button
           style={{

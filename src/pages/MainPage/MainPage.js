@@ -14,6 +14,9 @@ function MainPage() {
                         <div className="mainPageSearchBox">
                             <SearchBox />
                         </div>
+                        <aside className="mainPageFavorites2">
+                        <Favorites />
+                    </aside>
                         <div className="mainPageMovies">
                             <Movies />
                         </div>

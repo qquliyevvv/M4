@@ -2,6 +2,8 @@
     padding: 20px;
     background-color: rgb(43, 43, 107);
     display: flex;
+    color: #FFEEDB;
+    border-radius: 10px;
 }
 
 .movieImg {

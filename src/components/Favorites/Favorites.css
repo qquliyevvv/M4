@@ -3,7 +3,9 @@
     border: 1px solid rgba(0, 8, 7);
     padding: 30px 20px;
   }
-  
+  .link-to_list{
+    background-color: #25ffbed0;
+  }
   
   
   .fav_list {
@@ -25,7 +27,7 @@
   
   .fav_save {
     border: none;
-    background-color: #15c38fac;
+    background-color: #25ffbed0;
     padding: 10px 15px;
     color: #ffeedb;
     font-size: 14px;
@@ -63,5 +65,17 @@
   display: flex;
   justify-content: space-between;
 }
-
-  
+.disfls{
+  border: none;
+  padding: 10px 15px;
+  color: #ffeedb;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  border-radius: px;
+  background-color: #15c38f88;
+}
+.disfls:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.2s linear;
+}

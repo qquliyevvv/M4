@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./Favorites.css";
 import { connect } from "react-redux";
 import {
@@ -11,7 +10,7 @@ import { Link } from "react-router-dom";
 function Favorites(props) {
   const [state, setState] = useState({
     isSbm: false,
-    title: "Новый список",
+    title: "",
     disabled: false
   });
 
@@ -25,9 +24,10 @@ function Favorites(props) {
     return favoritesIDArray;
   };
   const saveListHandler = () => {
-    if(!state.title.length){
+    if(!state.title.length || getImdbIDArray().length==0){
       setState(prev=>({...prev, disabled: true }));
-    }else {
+    }
+    else if(getImdbIDArray().length>=0 ) {
       setState(prev=>({...prev, isSbm: true }));
       props.postList(state.title, getImdbIDArray());
     }
@@ -36,6 +36,7 @@ function Favorites(props) {
   return (
     <div className="fav-container">
       <input
+        placeholder="Новый список"
         value={title}
         className="fav_name"
         onChange={favoriteChange}
@@ -65,7 +66,7 @@ function Favorites(props) {
       {!isSbm ? (
         <button
           type="button"
-          className="fav_save"
+          className="fav_save "
           onClick={saveListHandler}
           
         >

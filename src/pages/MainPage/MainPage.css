@@ -18,6 +18,9 @@
   .mainPageSearchBox {
     margin-bottom: 35px;
   }
+  .mainPageFavorites2{
+    display: none;
+  }
   
   
   @media screen and (min-width: 320px) and (max-width: 991px) {
@@ -32,6 +35,12 @@
     }
     .mainPageFavorites {
       width: 50%;
+      display: none;
+    }
+    .mainPageFavorites2{
+      display: block;
+      width: 50%;
+      margin-bottom: 10px;
     }
     .mainPageMainSection {
       margin: 30px 0;
