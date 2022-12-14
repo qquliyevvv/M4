@@ -33,3 +33,20 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+@media screen and (min-width: 320px) and (max-width: 991px) {
+    .movieItemAddButton {
+        border: none;
+        background-color: #14C38E;
+        padding: 5%;
+        width:5%;
+        color: #FFEEDB;
+        font-size: 14px;
+        transition: all 0.2s linear;
+    }
+    .movieTitle {
+        font-size: 16px;
+    }
+    .movie-item__info{
+        margin: auto;
+    }
+}
