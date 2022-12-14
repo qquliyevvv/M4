@@ -79,7 +79,7 @@ function Favorites(props) {
             target="_blank"
             className="link-to__list"
           >
-            Ваши избранные
+            Перейти ко списку
           </Link>
         </button>
       )}

@@ -113,16 +113,24 @@ background: linear-gradient(90deg, rgb(43, 43, 107) 60%, rgb(43, 43, 107) 5%);
   width: 100%;
 }
 @media screen and (min-width: 320px) and (max-width: 991px) {
-  .list-page-movie{
-    width: 85%;
-    margin-left:20px;
-    margin-right:20px;
+  .details-value {
+    font-size: 13px;
+    width: 0%;
   }
-  .listp-title {
-    font-size: 34px;
-    margin: 26px 5px;
-    text-align: center;
-    font-family: 'Roboto';
-  
+  .movie-info {
+  margin-inline: 110px;
+  }
+  .list-page-movie img {
+    max-width: 208px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 5%;
+  background: linear-gradient(90deg, rgb(43, 43, 107) 65%, rgb(43, 43, 107) 5%);  
+  object-fit:cover;
+  height: 309px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  object-fit:cover;
   }
 }
