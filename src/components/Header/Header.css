@@ -9,3 +9,8 @@
     font-size: 45px;
     margin-left: 40px;
 }
+@media screen and (min-width: 320px) and (max-width: 991px) {
+    .headerContainer {
+        width: 145%;
+    }
+}
