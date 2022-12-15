@@ -66,7 +66,7 @@ function Favorites(props) {
       {!isSbm ? (
         <button
           type="button"
-          className={ (state.disabled && "disfls ") + (state.disabled || "fav_save ") }
+          className="fav_save "
           onClick={saveListHandler}
           
         >
