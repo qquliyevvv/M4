@@ -11,7 +11,8 @@
 
 .movieItemAddButton {
   background-color: #0d7e5c;
-  min-width: 170px;
+  min-width: 110px;
+  width: 22vw;
   border-radius: 5px;
 }
 
@@ -115,8 +116,7 @@ background: linear-gradient(90deg, rgb(43, 43, 107) 60%, rgb(43, 43, 107) 5%);
 @media screen and (min-width: 320px) and (max-width: 991px) {
   .list-page-movie{
     width: 85%;
-    margin-left:20px;
-    margin-right:20px;
+    margin: 20px;
   }
   .listp-title {
     font-size: 34px;
@@ -128,11 +128,20 @@ background: linear-gradient(90deg, rgb(43, 43, 107) 60%, rgb(43, 43, 107) 5%);
   .list-page ul li {
     margin: auto;
     width: 100vw;
+    margin-bottom: 20px;
   }
-  ul{
+  .ul{
+    margin-right: -20px;
+    margin-left: 20px;
   }
   .movie-img {
     width:30vw ;
     height: 20vh;
+    }
+    .list-page .ul {
+      margin-left: 5vh;      
+    }
+    .details{
+      width: 120px;
     }
 }
