@@ -19,10 +19,10 @@ function ListPage(props) {
         <Link className="Link" to="/">
           <Header />
         </Link>
+        <h1 className="listp-title">{props.title}</h1>
           {props.movieDetails.map((item) => {
             return (
                 <div className="movie-info">
-                  
                           <a
                             href={`https://www.imdb.com/title/${item.imdbID}/`}
                             target="_blank"
