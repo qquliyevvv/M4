@@ -13,8 +13,9 @@ function Favorites(props) {
     title: "",
     disabled: false
   });
+
   useEffect(() => {
-    if (state.disabled === false || !(!state.title.length || getImdbIDArray().length == 0)) {
+    if (state.disabled === false || (state.title.length) || !(getImdbIDArray().length == 0)) {
       if (!state.title.length || getImdbIDArray().length == 0) {
         setState(prev => ({ ...prev, disabled: true }))
       }
@@ -22,9 +23,7 @@ function Favorites(props) {
         setState(prev => ({ ...prev, disabled: false }))
       }
     }
-
-
-  })
+  }, [state.disabled])
   const favoriteChange = (e) => {
     setState({ title: e.target.value });
   };
