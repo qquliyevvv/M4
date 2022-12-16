@@ -2,8 +2,13 @@
 
 
 .movie-info {
+  margin-top: 30px;
   color: #fff;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
 }
+
 
 .Link {
   text-decoration: none;
@@ -127,19 +132,16 @@ background: linear-gradient(90deg, rgb(43, 43, 107) 60%, rgb(43, 43, 107) 5%);
   }
   .list-page ul li {
     margin: auto;
-    width: 100vw;
+    width: 50%;
     margin-bottom: 20px;
   }
-  .ul{
-    margin-right: -20px;
-    margin-left: 20px;
+  .list-page .ul {
+    margin: 0;
+    
   }
   .movie-img {
     width:30vw ;
     height: 20vh;
-    }
-    .list-page .ul {
-      margin-left: 5vh;      
     }
     .details{
       width: 120px;

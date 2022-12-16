@@ -19,63 +19,20 @@ function ListPage(props) {
         <Link className="Link" to="/">
           <Header />
         </Link>
-        <h1 className="listp-title">{props.title}</h1>
-        <ul className="ul">
           {props.movieDetails.map((item) => {
             return (
-              <li key={item.imdbID} className="list-page-movie list">
-                
                 <div className="movie-info">
-                  <h3 className="movieTitle">{item.Title}</h3>
-                  <h4 className="movie-about">О фильме</h4>
-                  <div className="details">
-                    <div className="details-title">
-                      Дата:
-                    </div>
-                    <div className="details-value">{item.Year}</div>
-                  </div>
-                  <div className="details">
-                    <div className="details-title">Страна:</div>
-                    <div className="details-value">
-                      {item.Country}
-                    </div>
-                  </div>
-                  <div className="details">
-                    <div className="details-title">Жанр:</div>
-                    <div className="details-value">{item.Genre}</div>
-                  </div>
-                  <div className="details-value">
-                    <ul className="info-list">
-
-                      <li id="info-item">
-                        <button className="movieItemAddButton link-imdb">
+                  
                           <a
                             href={`https://www.imdb.com/title/${item.imdbID}/`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="listp-link-imdb"
                           >
-                            Посмтореть в OMDb
+                            {item.Title}
                           </a>
-                        </button>
-                      </li>
-                    </ul>
-
-                  </div>
-                </div>
-                <img
-                  src={item.Poster}
-                  className="movie-img"
-                  alt={item.Title}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    )
-}
-
+                        </div>
+                       )})}
+                </div>)}
 const mapDispatchToProps = (dispatch) => ({
   getList: (id) => dispatch(getList(id)),
   getMovieInfoByImdbID: (listMovies) =>
