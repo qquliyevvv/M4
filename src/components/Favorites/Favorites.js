@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Favorites.css";
 import { connect } from "react-redux";
 import {
@@ -13,7 +13,18 @@ function Favorites(props) {
     title: "",
     disabled: false
   });
+  useEffect(() => {
+    if (state.disabled === false || !(!state.title.length || getImdbIDArray().length == 0)) {
+      if (!state.title.length || getImdbIDArray().length == 0) {
+        setState(prev => ({ ...prev, disabled: true }))
+      }
+      else {
+        setState(prev => ({ ...prev, disabled: false }))
+      }
+    }
 
+
+  })
   const favoriteChange = (e) => {
     setState({ title: e.target.value });
   };
@@ -24,11 +35,12 @@ function Favorites(props) {
     return favoritesIDArray;
   };
   const saveListHandler = () => {
-    if(!state.title.length || getImdbIDArray().length==0){
-      setState(prev=>({...prev, disabled: true }));
+    if (!state.title.length || getImdbIDArray().length == 0) {
+      setState(prev => ({ ...prev, disabled: true }));
+
     }
-    else if(getImdbIDArray().length>=0 ) {
-      setState(prev=>({...prev, isSbm: true }));
+    else if (getImdbIDArray().length >= 0) {
+      setState(prev => ({ ...prev, isSbm: true }));
       props.postList(state.title, getImdbIDArray());
     }
   };
@@ -66,19 +78,18 @@ function Favorites(props) {
       {!isSbm ? (
         <button
           type="button"
-          className="fav_save "
+          className={state.disabled ? "fav_save" : "fav_save black"}
           onClick={saveListHandler}
-          
         >
           Сохранить список
         </button>
-      ) : (    
-          <Link
-            target="_blank"
-            className="link-to__list"
-          >
-          <a href={"/list/" + props.listID}> Перейти ко списку</a> 
-          </Link>
+      ) : (
+        <Link
+          target="_blank"
+          className="link-to__list"
+        >
+          <a href={"/list/" + props.listID}> Перейти ко списку</a>
+        </Link>
       )}
     </div>
   );
