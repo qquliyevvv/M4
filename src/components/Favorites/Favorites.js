@@ -72,16 +72,13 @@ function Favorites(props) {
         >
           Сохранить список
         </button>
-      ) : (
-        <button type="button" className="fav_save">
+      ) : (    
           <Link
-            to={"/list/" + props.listID}
             target="_blank"
             className="link-to__list"
           >
-            Перейти ко списку
+          <a href={"/list/" + props.listID}> Перейти ко списку</a> 
           </Link>
-        </button>
       )}
     </div>
   );
